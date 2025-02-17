@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form with Enhanced Style</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        table {
+            width: 60%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .list-items {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        ol, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ol li, ul li {
+            padding: 5px 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>HTML Form with Table Alignment and List Styling</h2>
+
+    <form action="/submit" method="POST">
+        <table>
+            <tr>
+                <th><label for="name">Name:</label></th>
+                <td><input type="text" id="name" name="name" placeholder="Enter your name" required></td>
+            </tr>
+            <tr>
+                <th><label>Gender:</label></th>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="country">Country:</label></th>
+                <td>
+                    <select id="country" name="country" required>
+                        <option value="">--Select a Country--</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="age">Age Group:</label></th>
+                <td>
+                    <select id="age" name="age" required>
+                        <option value="">--Select Age Group--</option>
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="46+">46+</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="subscribe">Subscribe:</label></th>
+                <td>
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                    <label for="subscribe">Subscribe to my form...!</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
